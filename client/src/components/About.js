@@ -1,13 +1,15 @@
 import React, { useEffect } from 'react';
-import { useState } from 'react';
+import { useState,useContext } from 'react';
 import { Container, Box, Paper, Grid, Typography, Tab, Button } from '@mui/material';
 import { TabContext, TabList, TabPanel } from '@mui/lab';
 import logo from '../images/arbabprofilepic.jpg'
 import useStyles from '../styles';
 import { useNavigate } from 'react-router-dom';
+import { logContext } from '../app';
 
 export const About = () => {
   const [userdata,setuserdata] = useState({});
+  const {login,setlogin} = useContext(logContext)
   const navigate = useNavigate();
   const callAboutPage = async()=>{
     try {
@@ -32,6 +34,7 @@ export const About = () => {
   }
   useEffect(()=>{
     callAboutPage();
+    if(login) setlogin(true);
   },[])
 
   var classes = useStyles();
