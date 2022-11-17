@@ -83,7 +83,7 @@ router.post("/contact",authenticate,async(req,res)=>{
         res.status(401).json({message:"User not found"})
     }
 })
-router.get('/logout',(req,res)=>{
+router.get('/getlogout',(req,res)=>{
     res.clearCookie('jwttoken',{path:'/'})
     res.status(200).json({message:"Logged out succesfully"})
 })

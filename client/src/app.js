@@ -7,7 +7,7 @@ import {Signup} from './components/Signup';
 import {Login} from './components/Login';
 import {Navbar} from './components/Navbar';
 import { Contact } from './components/Contact';
-import {Error} from './components/Error'
+import {Error} from './components/Error';
 import { createContext,useContext,useState } from 'react';
 
 export const logContext = createContext(null);

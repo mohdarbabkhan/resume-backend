@@ -7,7 +7,7 @@ export const Error = () => {
     const {login,setLogin} = useContext(logContext);
     const classes = useStyles();
     const callLogedOut = async()=>{
-      const res = await fetch('/logout',{
+      const res = await fetch('/getlogout',{
             method:"GET",
             headers:{
                 Accept:"application/json",
