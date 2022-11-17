@@ -1,9 +1,8 @@
-import React,{useContext, useEffect} from 'react';
+import React,{useContext} from 'react';
 import { logContext } from '../app';
 import logo from '../images/logo.png'
 export const Navbar = () => {
   const {login} = useContext(logContext);
-  useEffect(()=>{
   if(login){
     return (
       <nav class="navbar navbar-expand-lg bg-light">
@@ -67,5 +66,5 @@ export const Navbar = () => {
       </nav>
     )
   }
-},[])
+  
 }

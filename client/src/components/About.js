@@ -34,7 +34,6 @@ export const About = () => {
   }
   useEffect(()=>{
     callAboutPage();
-    if(login) setlogin(true);
   },[])
 
   var classes = useStyles();
