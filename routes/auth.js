@@ -7,9 +7,9 @@ require('../db/connec');
 const User = require('../db/model/userSchema');
 const authenticate = require("../middleware/authentication")
 
-router.get('/home',authenticate,(req, res) => {
-    res.send("hello server from router");
-});
+// router.get('/home',authenticate,(req, res) => {
+//     res.send("hello server from router");
+// });
 
 
 router.post('/register', async (req, res) => {
@@ -60,9 +60,9 @@ router.post('/login', async (req, res) => {
     }
 })
 
-router.get("/about",authenticate,(req,res)=>{
-    res.send(req.rootUser);
-})
+// router.get("/about",authenticate,(req,res)=>{
+//     res.send(req.rootUser);
+// })
 
 router.get("/getdata",authenticate,(req,res)=>{
     res.send(req.rootUser);
